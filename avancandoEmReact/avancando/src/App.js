@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Foto2 from "./assets/Foto2.jpg";
+import ListRender from "./components/ListRender";
 
 import ManageData from "./components/ManageData";
 
@@ -17,6 +18,7 @@ function App() {
         <img width={400} src={Foto2} alt="Código" />
       </div>
       <ManageData />
+      <ListRender />
     </div>
   );
 }
