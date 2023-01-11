@@ -4,6 +4,7 @@ import Foto2 from "./assets/Foto2.jpg";
 import ListRender from "./components/ListRender";
 
 import ManageData from "./components/ManageData";
+import ConditionalRender from "./components/ConditionalRender";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </div>
       <ManageData />
       <ListRender />
+      <ConditionalRender />
     </div>
   );
 }
