@@ -7,6 +7,12 @@ import ManageData from "./components/ManageData";
 import ConditionalRender from "./components/ConditionalRender";
 import ShowUserName from "./components/ShowUserName";
 import CarDetails from "./components/CarDetails";
+import TesteFragment from "./components/TesteFragment";
+import PropChildren from "./components/PropChildren";
+import FunctionProp from "./components/FunctionProp";
+import { useState } from "react";
+import ShowMensage from "./components/ShowMensage";
+import ChangeMensage from "./components/ChangeMensage";
 
 function App() {
   const cars = [
@@ -29,6 +35,17 @@ function App() {
     },
   ];
   const userName = "Maria";
+
+  function showHour() {
+    console.log("Exec");
+  }
+
+  const [mensage, setMensage] = useState("");
+
+  function changeMensage(msg) {
+    setMensage(msg);
+  }
+
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -56,6 +73,13 @@ function App() {
           newCar={car.newCar}
         />
       ))}
+      <TesteFragment />
+      <PropChildren propNormal={"Testing"}>
+        <p>Testando Children</p>
+      </PropChildren>
+      <FunctionProp myFunc={showHour} />
+      <ShowMensage msg={mensage} />
+      <ChangeMensage changeMensage={changeMensage} />
     </div>
   );
 }
