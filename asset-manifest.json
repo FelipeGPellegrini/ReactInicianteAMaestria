@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/espaco/static/css/main.7167f4be.css",
+    "main.js": "/espaco/static/js/main.4c826666.js",
+    "index.html": "/espaco/index.html",
+    "main.7167f4be.css.map": "/espaco/static/css/main.7167f4be.css.map",
+    "main.4c826666.js.map": "/espaco/static/js/main.4c826666.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7167f4be.css",
+    "static/js/main.4c826666.js"
+  ]
+}
