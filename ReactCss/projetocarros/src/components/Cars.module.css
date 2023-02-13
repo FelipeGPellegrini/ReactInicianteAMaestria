@@ -1,0 +1,60 @@
+#ferrari {
+  display: flex;
+  margin: 30px auto;
+  width: 350px;
+  padding: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.266);
+  transition:width, 1s;
+  height: 200px;
+  justify-content: center;
+    flex-direction: column;
+}
+
+#ferrari:hover {
+  background-image: url("../../public/assets/ferrari.jpg");
+  background-size: cover;
+  border: 3px solid rgb(0, 0, 0);
+  color: transparent;
+  width: 500px;
+}
+
+#civic {
+  display: flex;
+  margin: 30px auto;
+  width: 350px;
+  padding: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.266);
+  transition:width, 1s;
+  height: 200px;
+  justify-content: center;
+    flex-direction: column;
+}
+
+#civic:hover {
+  background-image: url("../../public/assets/civic.jpg");
+  background-size: cover;
+  border: 3px solid rgb(0, 0, 0);
+  color: transparent;
+  width: 500px;
+}
+
+#sentra {
+  display: flex;
+  margin: 30px auto;
+  width: 350px;
+  padding: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.266);
+  transition:width, 1s;
+  height: 200px;
+  justify-content: center;
+    flex-direction: column;
+}
+
+#sentra:hover {
+  background-image: url("../../public/assets/sentra.jpeg");
+  background-size: cover;
+  border: 3px solid rgb(0, 0, 0);
+  color: transparent;
+  width: 500px;
+}
+
