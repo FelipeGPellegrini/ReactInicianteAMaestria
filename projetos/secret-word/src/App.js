@@ -62,9 +62,11 @@ function App() {
     setPickedCategory(category);
     setPickedWord(word);
     setLetters(wordLetters);
-
-    setGameStage(stages[1].name);
   }, [pickWordAndCategory]);
+
+  function clickStartGame() {
+    setGameStage(stages[1].name);
+  }
 
   // process letter input
   const verifyLetter = (letter) => {
@@ -123,9 +125,6 @@ function App() {
   useEffect(() => {
     const uniqueLetters = [...new Set(letters)];
 
-    console.log(uniqueLetters);
-    console.log(guessedLetters);
-
     // win condition
     if (guessedLetters.length === uniqueLetters.length) {
       // add score
@@ -138,7 +137,9 @@ function App() {
 
   return (
     <div className="App">
-      {gameStage === "start" && <StartScreen startGame={startGame} />}
+      {gameStage === "start" && (
+        <StartScreen startGame={startGame} clickStartGame={clickStartGame} />
+      )}
       {gameStage === "game" && (
         <Game
           verifyLetter={verifyLetter}
