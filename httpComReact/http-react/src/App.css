@@ -2,3 +2,8 @@
   text-align: center;
 }
 
+.App ul {
+  list-style-type: none;
+  padding: 0;
+}
+
