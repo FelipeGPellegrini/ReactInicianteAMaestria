@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+
+import { useFetch } from "./hooks/useFetch";
+
 import "./App.css";
 
 const url = "http://localhost:3000/products";
@@ -6,28 +9,85 @@ const url = "http://localhost:3000/products";
 function App() {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(url);
-      const data = await res.json();
+  // Custom hook
 
-      setProducts(data);
-    }
+  const { data: items } = useFetch(url);
 
-    fetchData();
-  }, []);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
 
-  console.log(products);
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const res = await fetch(url);
+  //     const data = await res.json();
+
+  //     setProducts(data);
+  //   }
+
+  //   fetchData();
+  // }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const product = {
+      name,
+      price,
+    };
+
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+
+    const addedProduct = await res.json();
+
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    setName("");
+    setPrice("");
+  };
   return (
     <div className="App">
-      <h1>JSON server</h1>
+      <h1>Lista de produtosr</h1>
       <ul>
-        {products.map((product) => (
-          <li>
-            {product.name} - R$: {product.price}
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li>
+              {product.name} - R$: {product.price}
+            </li>
+          ))}
       </ul>
+      <div className="add-product">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Nome:
+            <input
+              type="text"
+              value={name}
+              name="name"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
+          </label>
+          <label>
+            Price:
+            <input
+              type="text"
+              value={price}
+              name="price"
+              onChange={(e) => {
+                setPrice(e.target.value);
+              }}
+            />
+          </label>
+          <input type="submit" value="Criar" />
+        </form>
+      </div>
     </div>
   );
 }
