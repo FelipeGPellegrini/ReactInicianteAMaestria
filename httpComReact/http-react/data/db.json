@@ -1,31 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Camisa",
-      "price": 59.9
-    },
-    {
-      "id": 2,
-      "name": "Calça vermelha",
-      "price": 90
-    },
-    {
-      "id": 3,
-      "name": "Boné aba reta",
-      "price": 29.9
-    },
-    {
-      "name": "Jaqueta Moncler",
-      "price": "15000",
-      "id": 4
-    },
-    {
-      "name": "Boné Nike",
-      "price": "130",
-      "id": 5
-    },
-    {
       "name": "Chinelo Adidas",
       "price": "160",
       "id": 6
@@ -39,6 +14,31 @@
       "name": "Pulseira cravejada",
       "price": "3600",
       "id": 8
+    },
+    {
+      "name": "Bermuda Gucci",
+      "price": "1300",
+      "id": 9
+    },
+    {
+      "name": "Cueca Calvin Klein",
+      "price": "200",
+      "id": 10
+    },
+    {
+      "name": "Calça Gucci",
+      "price": "1300",
+      "id": 11
+    },
+    {
+      "name": "Cordão ouro 18k",
+      "price": "9530",
+      "id": 12
+    },
+    {
+      "name": "Meia Nike",
+      "price": "130",
+      "id": 13
     }
   ]
 }
