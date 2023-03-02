@@ -17,4 +17,5 @@ nav a:hover {
 .active {
   background-color: black;
   color: whitesmoke;
+  border-radius: 10px;
 }
